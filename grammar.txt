@@ -1,0 +1,30 @@
+S -> int main l_para r_para begin C end
+C -> D E
+C -> epsilon
+C -> Q sc
+D -> F 
+D -> T
+E -> F
+E -> epsilon
+D -> int V sc
+V -> id T W
+W -> cm V 
+W -> epsilon
+F -> for l_para Q sc id R id sc G r_para begin C end
+G -> id O 
+G -> O id
+O -> add_op add_op 
+O -> sub_op sub_op
+R -> re_le 
+R -> re_lt 
+R -> re_ge 
+R -> re_gt
+T -> assign U
+T -> epsilon
+U -> id P id 
+U -> digit
+P -> add_op 
+P -> sub_op 
+P -> mul_op 
+P -> div_op
+Q -> id assign U
